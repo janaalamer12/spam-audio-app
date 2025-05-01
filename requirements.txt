@@ -6,4 +6,4 @@ nltk
 openai-whisper
 ffmpeg-python
 torch
-streamlit-webrtc
+

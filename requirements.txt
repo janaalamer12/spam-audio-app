@@ -6,5 +6,5 @@ nltk
 openai-whisper
 ffmpeg-python
 torch
-ffmpeg-python
+
 

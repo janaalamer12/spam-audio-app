@@ -60,3 +60,38 @@ if audio_file is not None:
     vect_audio = vectorizer.transform([cleaned_audio_text])
     pred_audio = model.predict(vect_audio)[0]
     st.success("🟠 SPAM" if pred_audio else "🟢 NOT SPAM")
+
+import streamlit as st
+import whisper
+import tempfile
+import os
+
+# Load the Whisper model
+asr_model = whisper.load_model("base")
+
+st.title("🎙️ Spam Audio Transcriber")
+
+# Upload audio file
+uploaded_file = st.file_uploader("Upload an audio file (wav or mp3)", type=["wav", "mp3"])
+
+if uploaded_file is not None:
+    try:
+        # Save uploaded audio to a temporary file
+        with tempfile.NamedTemporaryFile(delete=False, suffix=".wav") as temp_audio:
+            temp_audio.write(uploaded_file.read())
+            temp_filename = temp_audio.name
+
+        # Confirm file exists before transcription
+        if os.path.exists(temp_filename):
+            st.info("🔁 Converting audio to text...")
+            result = asr_model.transcribe(temp_filename)
+            st.success("✅ Transcription complete!")
+            st.write("**Transcribed Text:**")
+            st.write(result["text"])
+        else:
+            st.error("❌ Audio file could not be saved properly.")
+    except Exception as e:
+        st.error(f"🚫 An error occurred: {str(e)}")
+else:
+    st.warning("📂 Please upload a WAV or MP3 file to continue.")
+

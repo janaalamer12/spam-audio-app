@@ -1,10 +1,6 @@
 streamlit
-scikit-learn
-pandas
-numpy
+whisper
 nltk
-openai-whisper
-ffmpeg-python
-torch
-
+scikit-learn
+numpy
 

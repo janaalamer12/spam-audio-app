@@ -9,9 +9,9 @@ from nltk.corpus import stopwords
 
 # Download stopwords
 #nltk.download('stopwords')
+import whisper
+asr_model = whisper.load_model("base")  # ✅ This is valid *ONLY* with openai-whisper
 
-# Load Whisper model
-asr_model = whisper.load_model("tiny")
 
 # Load classifier model and vectorizer
 with open("model_nb.pkl", "rb") as f:

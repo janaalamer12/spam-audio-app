@@ -1,7 +1,6 @@
 streamlit
-openai-whisper
+whisper
 nltk
 scikit-learn
 numpy
-whisper
 torch==2.0.1

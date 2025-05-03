@@ -1,7 +1,6 @@
 streamlit
-openai-whisper
-nltk
-scikit-learn
 numpy
-torch==2.0.1
-nest_asyncio
+pandas
+scikit-learn
+nltk
+openai-whisper

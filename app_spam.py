@@ -6,6 +6,10 @@ import nltk
 import streamlit as st
 import whisper
 from nltk.corpus import stopwords
+import nltk
+nltk.data.path.append('./nltk_data')  # Add this before using stopwords
+
+from nltk.corpus import stopwords
 
 # Download stopwords
 nltk.download('stopwords')

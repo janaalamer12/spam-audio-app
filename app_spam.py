@@ -1,4 +1,4 @@
-وحطيت هذا import os
+import os
 import re
 import pickle
 import tempfile

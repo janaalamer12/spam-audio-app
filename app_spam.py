@@ -1,4 +1,4 @@
-import os
+وحطيت هذا import os
 import re
 import pickle
 import tempfile
@@ -8,10 +8,10 @@ import whisper
 from nltk.corpus import stopwords
 
 # Download stopwords
-#nltk.download('stopwords')
-import whisper
-asr_model = whisper.load_model("base")  # ✅ This is valid *ONLY* with openai-whisper
+nltk.download('stopwords')
 
+# Load Whisper model
+asr_model = whisper.load_model("base")
 
 # Load classifier model and vectorizer
 with open("model_nb.pkl", "rb") as f:

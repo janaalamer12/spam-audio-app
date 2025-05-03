@@ -8,7 +8,7 @@ import whisper
 from nltk.corpus import stopwords
 
 # Download stopwords
-nltk.download('stopwords')
+#nltk.download('stopwords')
 
 # Load Whisper model
 asr_model = whisper.load_model("base")

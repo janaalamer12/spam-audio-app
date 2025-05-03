@@ -11,7 +11,7 @@ from nltk.corpus import stopwords
 #nltk.download('stopwords')
 
 # Load Whisper model
-asr_model = whisper.load_model("base")
+asr_model = whisper.load_model("tiny")
 
 # Load classifier model and vectorizer
 with open("model_nb.pkl", "rb") as f:

@@ -4,4 +4,7 @@ torch
 nltk
 scikit-learn
 numpy
+whisper
+torch==2.0.1
+
 
